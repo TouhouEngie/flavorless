@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Example site</h1>
+        <p>It may not be beautiful, but it's functional.</p>
+
+        <select id="select" name="music" onchange="swapAudio(event)">
+            <option value="bakenohana.mp3">Bake no Hana</option>
+            <option value="n25_mysterysong.mp3">Empurple</option>
+        </select>
+
+        <audio id="audio"></audio>
+
+        <button id="railCall"></button>
+        <button id="busCall"></button>
+
+        <dialog id="railCallDialog">
+            
+        </dialog>
+
+        <dialog id="busCallDialog">
+
+        </dialog>
+    </body>
+    <script src="script.js"></script>
+</html>
