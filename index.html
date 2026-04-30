@@ -4,26 +4,42 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1>Example site</h1>
-        <p>It may not be beautiful, but it's functional.</p>
+        <marquee id="bustime">
+            <p>test</p>
+        </marquee>
 
-        <select id="select" name="music" onchange="swapAudio(event)">
-            <option value="bakenohana.mp3">Bake no Hana</option>
-            <option value="n25_mysterysong.mp3">Empurple</option>
-        </select>
+        <div>
+            <h1>Example site</h1>
+            <p>It may not be beautiful, but it's functional.</p>
+        </div>
 
-        <audio id="audio"></audio>
+        <div>
+            <select id="select" name="music" onchange="swapAudio(event)">
+                <option value="">look at me! i'm a song selector!</option>
+                <option value="bakenohana.mp3">Bake no Hana</option>
+                <option value="n25_mysterysong.mp3">Empurple</option>
+            </select>
+            <br>
+            <audio controls id="audio"></audio>
+        </div>
 
-        <button id="railCall"></button>
-        <button id="busCall"></button>
+        <div>
+            <button command="show-modal" commandfor="dialogue">Change transit stats</button>
+            <dialog id="dialogue">
+                <p>Enter the station you wish to view:</p>
+                <form id="transit">
+                    <input type="text" id="name">
+                    <button type="submit">OK</button>
+                </form>
+                <button onclick="HTMLDialogElement.close()">Close</button>
+            </dialog>
+        </div>
 
-        <dialog id="railCallDialog">
-            
-        </dialog>
-
-        <dialog id="busCallDialog">
-
-        </dialog>
+        <div>
+            <button id="start">Start a game</button>
+            <div class="canvas"> <!-- the canvas that isn't a canvas -->
+            </div>
+        </div>
     </body>
     <script src="script.js"></script>
 </html>
